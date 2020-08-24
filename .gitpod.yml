@@ -1,0 +1,17 @@
+image:
+  file: .gitpod.Dockerfile
+tasks:
+  - name: Calculator
+    init: flutter run --web-port 8080
+ports:
+  - port: 8080
+    onOpen: open-preview
+github:
+  prebuilds:
+    branches: true
+    pullRequestsFromForks: true
+    addBadge: true
+vscode:
+  extensions:
+    - Dart-Code.flutter@3.5.1:0FyuzXye7dV19PNst3+Llg==
+    - Dart-Code.dart-code@3.9.0-dev:F9102gBSxPDXX6fro09WGw==
