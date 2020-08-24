@@ -58,18 +58,16 @@ class AppBody extends StatelessWidget {
           );
         },
       ),
-      body: Center(
-        child: PageView(
-          controller: state.getController(),
-          onPageChanged: (index) {
-            state.setIndex(index);
-          },
-          children: [
-            TaskPage(),
-            HomePage(),
-            SchedulePage(),
-          ],
-        ),
+      body: PageView(
+        controller: state.getController(),
+        onPageChanged: (index) {
+          state.setIndex(index);
+        },
+        children: [
+          TaskPage(),
+          HomePage(),
+          SchedulePage(),
+        ],
       ),
     );
   }
