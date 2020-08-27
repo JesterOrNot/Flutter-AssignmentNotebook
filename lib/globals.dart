@@ -2,5 +2,4 @@ library globals;
 
 import 'package:assignment_notebook/NavState.dart';
 
-NavState state = NavState();
-
+NavState navState = NavState();
