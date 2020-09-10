@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Task extends StatefulWidget {
   final String text;
@@ -20,6 +21,11 @@ class _TaskState extends State<Task> {
     this.text = widget.text;
     this.submitted = true;
     this.controller = TextEditingController(text: this.text);
+  }
+
+  Future<Null> setList(List<String> list) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setStringList("assignments", list);
   }
 
   void edit(String newText) {
