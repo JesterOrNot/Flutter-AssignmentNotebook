@@ -1,4 +1,4 @@
-import 'package:assignment_notebook/DeleteConfirm.dart';
+import 'package:assignment_notebook/confirm_delete.dart';
 import 'package:assignment_notebook/globals.dart';
 import 'package:assignment_notebook/task.dart';
 import 'package:flutter/material.dart';

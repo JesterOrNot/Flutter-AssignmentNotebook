@@ -1,4 +1,5 @@
 import 'package:assignment_notebook/KeepAlivePage.dart';
+import 'package:assignment_notebook/SearchBar.dart';
 import 'package:assignment_notebook/home.dart';
 import 'package:assignment_notebook/schedule.dart';
 import 'package:assignment_notebook/tasks.dart';
@@ -12,6 +13,15 @@ class AppBody extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("FlutterBook"),
+        actions: <Widget>[
+          IconButton(
+             icon: Icon(Icons.wb_sunny),
+             tooltip: "Switch themes!",
+             onPressed: () {
+               appTheme.switchTheme();
+             },
+          )
+        ],
       ),
       bottomNavigationBar: StreamBuilder(
         stream: navState.stream$,
